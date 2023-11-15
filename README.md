@@ -32,3 +32,9 @@ El evento que se encarga de crear los usuarios recibe un payload llamado message
 Al parsear este JSON, vemos que contiene siempre dos elementos, un id, que es un uid generado en el producer y el nombre del usuario a crear.
 
 `get-all-users` funciona de la misma manera, pero no recibe un payload, simplemente recibe el mensaje, lo procesa y le confirma al producer que fue exitoso y retorna la lista de usuarios.
+
+### MongoDB Atlas
+
+Para hacer uso de MongoDB atlas en lugar del contenedor de MongoDB local, cambia la variable de entorno
+
+`MONGODB_HOST="mongodb+srv://admin:sFqYHmoKrl2zKkkN@cluster0.nbres.mongodb.net/users-rabbit?retryWrites=true&w=majority"`
